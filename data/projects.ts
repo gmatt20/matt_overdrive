@@ -6,6 +6,8 @@ import Bravo from "@/public/bravo.webp";
 import GradeMeIn from "@/public/GradeMeIn.webp";
 import BitWizards from "@/public/BitWizards.webp";
 import Cinemagine from "@/public/Cinemagine.webp";
+import neovim from "@/public/neovim.webp";
+import charity_water from "@/public/charity_water.webp";
 
 interface Project {
   url: StaticImageData;
@@ -46,15 +48,28 @@ export const ProjectData: Project[] = [
     alt: "Picture of the AI Student Collective @ UCR Website",
   },
   {
+    url: neovim,
+    link: "https://github.com/gmatt20/overdrive.nvim/",
+    title: "overdrive.nvim",
+    alt: "Picture of overdrive.nvim",
+  },
+
+  {
     url: Cinemagine,
-    link: "https://devpost.com/software/cinemagine",
+    link: "https://devpost.com/software/cinemagine/",
     title: "Cinemagine",
     alt: "Picture of Cinemagine",
   },
   {
     url: BitWizards,
-    link: "https://devpost.com/software/bit-wizards",
+    link: "https://devpost.com/software/bit-wizards/",
     title: "BitWizards",
     alt: "Picture of BitWizards",
+  },
+  {
+    url: charity_water,
+    link: "https://gmatt20.github.io/charity-water-lp/",
+    title: "Charity: Water Landing Page",
+    alt: "Picture Charity: Water Landing Page",
   },
 ];
