@@ -8,7 +8,7 @@ export function Projects() {
       <div className="flex items-center gap-4">
         <div className="flex flex-col">
           <h2 className="text-2xl font-bold text-foreground tracking-tight">
-            Past Deployments
+            Past Projects
           </h2>
         </div>
         <Separator className="flex-1 bg-border" />
