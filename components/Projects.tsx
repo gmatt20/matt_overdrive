@@ -13,7 +13,7 @@ export function Projects() {
         </div>
         <Separator className="flex-1 bg-border" />
       </div>
-      <ProjectsCard projects={ProjectData} />
+      <ProjectsCard projects={ProjectData.slice(2)} />
     </section>
   );
 }

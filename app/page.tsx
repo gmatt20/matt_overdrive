@@ -23,6 +23,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { Projects } from "@/components/Projects";
+import { GradeMeIn } from "@/components/GradeMeIn";
 
 export default function MattOverdrive() {
   return (
@@ -239,7 +240,7 @@ export default function MattOverdrive() {
               </p>
             </div>
 
-            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-border bg-muted shadow-sm group"></div>
+            <GradeMeIn />
           </div>
         </section>
 
