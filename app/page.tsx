@@ -11,6 +11,8 @@ import {
   MapPin,
 } from "lucide-react";
 
+import { Link } from "lucide-react";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Bravo } from "@/components/Bravo";
@@ -54,7 +56,6 @@ export default function MattOverdrive() {
             </div>
             <Bravo />
           </Card>
-
           {/* ABOUT ME & EDUCATION */}
           <Card className="bg-card border-border flex flex-col justify-between hover:border-primary/50 transition-colors">
             <CardHeader className="pb-2">
@@ -93,15 +94,7 @@ export default function MattOverdrive() {
                 </p>
               </div>
             </CardContent>
-            <CardFooter>
-              <div className="flex gap-4 text-muted-foreground">
-                <Github className="h-4 w-4 hover:text-foreground cursor-pointer transition-colors" />
-                <Linkedin className="h-4 w-4 hover:text-foreground cursor-pointer transition-colors" />
-                <Mail className="h-4 w-4 hover:text-foreground cursor-pointer transition-colors" />
-              </div>
-            </CardFooter>
           </Card>
-
           <Card className="hover:border-primary/50 transition-colors bg-card border-border relative overflow-hidden flex flex-col h-full">
             <div className="absolute -right-6 -bottom-6 opacity-5 pointer-events-none">
               <Briefcase className="h-32 w-32 text-foreground" />
