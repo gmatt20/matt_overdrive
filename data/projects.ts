@@ -2,6 +2,8 @@ import { StaticImageData } from "next/image";
 import tkd from "@/public/tkd.webp";
 import acm from "@/public/acm.webp";
 import aisc from "@/public/aisc.webp";
+import Bravo from "@/public/bravo.png";
+import GradeMeIn from "@/public/GradeMeIn.png";
 
 interface Project {
   url: StaticImageData;
@@ -11,6 +13,18 @@ interface Project {
 }
 
 export const ProjectData: Project[] = [
+  {
+    url: Bravo,
+    link: "https://agentbravo.xyz/",
+    title: "Agent Bravo AI",
+    alt: "Picture of Agent Bravo AI",
+  },
+  {
+    url: GradeMeIn,
+    link: "https://devpost.com/software/grademein/",
+    title: "GradeMeIn: Winner at SB Hacks",
+    alt: "Picture of GradeMeIn",
+  },
   {
     url: tkd,
     link: "https://tkd.ucrhighlanders.org/",
