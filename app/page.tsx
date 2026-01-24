@@ -1,29 +1,10 @@
-import {
-  ArrowUp,
-  ArrowRight,
-  Mic,
-  ArrowUpRight,
-  Github,
-  Linkedin,
-  Trophy,
-  Briefcase,
-  Mail,
-  MapPin,
-} from "lucide-react";
+import { Briefcase } from "lucide-react";
 
-import { Link } from "lucide-react";
-import { SiGithub, SiLinkedin } from "react-icons/si";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 import { Bravo } from "@/components/Bravo";
 import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { Projects } from "@/components/Projects";
@@ -34,11 +15,9 @@ export default function MattOverdrive() {
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20">
       <main className="container px-4 py-12 md:px-8 md:py-24 max-w-7xl mx-auto space-y-32">
         <Hero />
-
         {/* BENTO GRID */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
           <Card className="md:col-span-2 min-h-[500px] bg-card border-border relative hover:border-primary/50 transition-colors overflow-hidden flex flex-col md:flex-row">
-            {/* Left Content */}
             <div className="flex-1 p-8 md:p-12 flex flex-col justify-center relative z-10">
               <div className="space-y-4">
                 <h2 className="font-display text-5xl md:text-7xl text-card-foreground tracking-wide">
