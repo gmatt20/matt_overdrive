@@ -23,23 +23,21 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="hidden md:block">
-          <Badge
-            variant="outline"
-            className="font-mono font-normal text-muted-foreground py-1.5 px-3 flex items-center gap-2"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-            </span>
-            STATUS: BUILDING BRAVO AI
-          </Badge>
-        </div>
+        <Badge
+          variant="outline"
+          className="font-mono font-normal text-muted-foreground py-1.5 px-3 flex items-center gap-2"
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+          </span>
+          STATUS: BUILDING BRAVO AI
+        </Badge>
       </div>
       <div className="space-y-4">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-foreground leading-[1.1]">
-          ENGINEERING SYSTEMS <br className="hidden md:block" />
-          <span className="text-brand">& FOUNDING FUTURES.</span>
+          SOFTWARE ENGINEER <br className="hidden md:block" />
+          <span className="text-brand">& PRODUCT ARCHITECT.</span>
         </h1>
       </div>
     </section>
