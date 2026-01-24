@@ -8,6 +8,7 @@ import BitWizards from "@/public/BitWizards.webp";
 import Cinemagine from "@/public/Cinemagine.webp";
 import neovim from "@/public/neovim.webp";
 import charity_water from "@/public/charity_water.webp";
+import ponder from "@/public/ponder.webp";
 
 interface Project {
   url: StaticImageData;
@@ -71,5 +72,11 @@ export const ProjectData: Project[] = [
     link: "https://gmatt20.github.io/charity-water-lp/",
     title: "Charity: Water Landing Page",
     alt: "Picture Charity: Water Landing Page",
+  },
+  {
+    url: ponder,
+    link: "https://ponder-9thg-8xxgoc2uw-gmattdevs-4416s-projects.vercel.app/",
+    title: "Ponder: Privacy-First Notes App",
+    alt: "Picture Ponder: Privacy First Notes App",
   },
 ];
