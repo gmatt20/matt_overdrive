@@ -2,8 +2,10 @@ import { StaticImageData } from "next/image";
 import tkd from "@/public/tkd.webp";
 import acm from "@/public/acm.webp";
 import aisc from "@/public/aisc.webp";
-import Bravo from "@/public/bravo.png";
-import GradeMeIn from "@/public/GradeMeIn.png";
+import Bravo from "@/public/bravo.webp";
+import GradeMeIn from "@/public/GradeMeIn.webp";
+import BitWizards from "@/public/BitWizards.webp";
+import Cinemagine from "@/public/Cinemagine.webp";
 
 interface Project {
   url: StaticImageData;
@@ -42,5 +44,17 @@ export const ProjectData: Project[] = [
     link: "https://aisc.ucrhighlanders.org/",
     title: "AI Student Collective @ UCR",
     alt: "Picture of the AI Student Collective @ UCR Website",
+  },
+  {
+    url: Cinemagine,
+    link: "https://devpost.com/software/cinemagine",
+    title: "Cinemagine",
+    alt: "Picture of Cinemagine",
+  },
+  {
+    url: BitWizards,
+    link: "https://devpost.com/software/bit-wizards",
+    title: "BitWizards",
+    alt: "Picture of BitWizards",
   },
 ];
