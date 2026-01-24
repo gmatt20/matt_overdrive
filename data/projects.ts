@@ -68,7 +68,7 @@ export const ProjectData: Project[] = [
     link: "https://devpost.com/software/grademein/",
     title: "GradeMeIn (SB Hacks Winner)",
     description:
-      "An AI-powered LMS designed to detect plagiarism. Uses a custom voice agent to interview students about their code to verify authorship.",
+      "An AI-powered LMS designed to detect plagiarism. Uses a custom voice agent to interview students about their submission to verify authorship.",
     techStack: [
       { name: "Hackathon", icon: CodeXml },
       { name: "Next.js", icon: SiNextdotjs },
@@ -172,8 +172,8 @@ export const ProjectData: Project[] = [
     techStack: [
       { name: "Lua", icon: SiLua },
       { name: "Neovim", icon: SiNeovim },
-      { name: "Lazy.nvim", icon: Database }, // Generic fallback
-      { name: "Mason", icon: PlugZap }, // Generic fallback
+      { name: "Lazy.nvim", icon: Database },
+      { name: "Mason", icon: PlugZap },
     ],
     alt: "Picture of overdrive.nvim",
   },
