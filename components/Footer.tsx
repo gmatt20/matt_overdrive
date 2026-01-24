@@ -6,11 +6,13 @@ export default function Footer() {
     <footer className="border-t border-border mt-32 pt-10 pb-20">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
         <div className="space-y-2">
-          <div className="font-mono text-sm text-primary font-bold">
+          <div className="font-mono flex text-sm text-primary font-bold">
             Matthew Garcia
           </div>
           <p className="text-sm text-muted-foreground">
-            "Success is not final, failure is not fatal."
+            &quot;Everything around you that you call life was made up by people
+            who were no smarter than you&quot;
+            <br />- Steve Jobs
           </p>
         </div>
         <div className="flex gap-6 items-center">

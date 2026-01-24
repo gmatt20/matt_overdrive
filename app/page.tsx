@@ -9,6 +9,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { Projects } from "@/components/Projects";
 import { GradeMeIn } from "@/components/GradeMeIn";
+import { GraduationCap } from "lucide-react";
 
 export default function MattOverdrive() {
   return (
@@ -48,7 +49,7 @@ export default function MattOverdrive() {
                 </Avatar>
               </div>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex-1 flex flex-col gap-6">
               <div className="space-y-4">
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Hello! I'm Matthew—a{" "}
@@ -69,16 +70,37 @@ export default function MattOverdrive() {
                   As the Founder of{" "}
                   <span className="text-primary font-medium">Bravo AI</span>, I
                   am driven by curiosity and the belief that the best way to
-                  predict the future is to compile it.
+                  predict the future is to build it.
                 </p>
+              </div>
+
+              <Separator className="bg-border" />
+
+              <div className="space-y-2">
+                <h4 className="text-sm font-semibold text-foreground flex items-center gap-2">
+                  <GraduationCap className="h-4 w-4 text-primary" />
+                  Education
+                </h4>
+                <div className="flex justify-between items-start">
+                  <div className="space-y-0.5">
+                    <p className="text-xs font-medium text-foreground">
+                      UC Riverside
+                    </p>
+                    <p className="text-[10px] text-muted-foreground">
+                      B.A. Psychology
+                    </p>
+                  </div>
+                  <Badge
+                    variant="secondary"
+                    className="text-[10px] h-5 font-mono"
+                  >
+                    June 2026
+                  </Badge>
+                </div>
               </div>
             </CardContent>
           </Card>
           <Card className="hover:border-primary/50 transition-colors bg-card border-border relative overflow-hidden flex flex-col h-full">
-            <div className="absolute -right-6 -bottom-6 opacity-5 pointer-events-none">
-              <Briefcase className="h-32 w-32 text-foreground" />
-            </div>
-
             <CardHeader className="pb-2 shrink-0">
               <CardTitle className="text-foreground flex items-center gap-2 text-lg">
                 <Briefcase className="h-4 w-4 text-primary" />
@@ -94,12 +116,12 @@ export default function MattOverdrive() {
                   </h3>
                   <Badge
                     variant="outline"
-                    className="text-[10px] px-1.5 h-5 border-primary/30 text-primary"
+                    className="text-[10px] px-2 h-5 border-primary/30 text-primary font-mono"
                   >
-                    Present
+                    2026 - Present
                   </Badge>
                 </div>
-                <div className="text-xs font-mono text-muted-foreground mt-0.5">
+                <div className="text-xs font-bold text-brand mt-0.5">
                   Bravo AI
                 </div>
                 <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
@@ -108,36 +130,39 @@ export default function MattOverdrive() {
                   bi-directional sync.
                 </p>
               </div>
-
               <div>
                 <div className="flex justify-between items-start">
                   <h3 className="text-sm font-semibold text-foreground">
                     Associate Team Lead
                   </h3>
-                  <Badge variant="secondary" className="text-[10px] px-1.5 h-5">
-                    Present
+                  <Badge
+                    variant="outline"
+                    className="text-[10px] px-2 h-5 border-primary/30 text-primary font-mono"
+                  >
+                    2025 - Present
                   </Badge>
                 </div>
-                <div className="text-xs font-mono text-muted-foreground mt-0.5">
+                <div className="text-xs text-brand font-bold mt-0.5">
                   Podium Education
                 </div>
                 <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-                  Supporting a 200+ student cohort. Mentoring trainees in
-                  full-stack web development (HTML/CSS/JS) and troubleshooting
-                  Git workflows.
+                  Supporting a 200+ student cohort. Mentoring trainees in web
+                  development (HTML/CSS/JS) and troubleshooting Git workflows.
                 </p>
               </div>
-
               <div>
                 <div className="flex justify-between items-start">
                   <h3 className="text-sm font-semibold text-foreground">
                     Frontend Software Engineer
                   </h3>
-                  <span className="text-[10px] text-muted-foreground font-mono pt-1">
-                    2025
-                  </span>
+                  <Badge
+                    variant="outline"
+                    className="text-[10px] px-2 h-5 border-primary/30 text-primary font-mono"
+                  >
+                    2024 - 2025
+                  </Badge>
                 </div>
-                <div className="text-xs font-mono text-muted-foreground mt-0.5">
+                <div className="text-xs font-bold text-brand mt-0.5">
                   ACM @ UCR
                 </div>
                 <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
