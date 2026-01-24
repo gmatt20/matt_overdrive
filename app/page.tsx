@@ -1,4 +1,15 @@
-import { Github, Linkedin, Briefcase, Mail, MapPin } from "lucide-react";
+import {
+  ArrowUp,
+  ArrowRight,
+  Mic,
+  ArrowUpRight,
+  Github,
+  Linkedin,
+  Trophy,
+  Briefcase,
+  Mail,
+  MapPin,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -13,6 +24,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Bravo from "@/public/bravo.png";
+import GradeMeIn from "@/public/GradeMeIn.png";
+import Link from "next/link";
 
 export default function MattOverdrive() {
   return (
@@ -62,8 +75,9 @@ export default function MattOverdrive() {
         </section>
 
         {/* BENTO GRID */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card className="md:col-span-2 min-h-[500px] hover:border-primary/50 transition-colors bg-card border-border relative overflow-hidden group flex flex-col md:flex-row">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+          <Card className="md:col-span-2 min-h-[500px] bg-card border-border relative overflow-hidden group flex flex-col md:flex-row">
+            {/* Left Content */}
             <div className="flex-1 p-8 md:p-12 flex flex-col justify-center relative z-10">
               <div className="space-y-4">
                 <h2 className="font-display text-5xl md:text-7xl text-card-foreground tracking-wide">
@@ -78,21 +92,35 @@ export default function MattOverdrive() {
                   solving "Calendar Tetris" forever.
                 </p>
               </div>
-
-              <div className="flex flex-wrap gap-4 mt-8">
-                <Button size="lg" className="font-bold px-8 h-12">
-                  Join Waitlist
-                </Button>
-              </div>
             </div>
 
             <div className="flex-1 relative flex items-center justify-center p-8 overflow-hidden">
-              <div className="relative w-full max-w-md aspect-square  border border-border rounded-xl shadow-sm overflow-hidden">
+              <div className="relative w-full max-w-md aspect-square border border-border rounded-xl shadow-sm overflow-hidden bg-muted/20">
                 <Image
                   src={Bravo}
                   alt="Bravo AI Interface"
-                  className="w-full h-full object-cover "
+                  className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 grayscale-[100%] opacity-90 group-hover:opacity-100"
                 />
+                <Link
+                  href="https://agentbravo.xyz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute inset-0 z-10 block"
+                >
+                  <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center backdrop-blur-[2px]">
+                    <div className="flex items-center gap-2 border border-primary/50 bg-card px-4 py-2 rounded shadow-[0_0_15px_rgba(0,0,0,0.2)] transform scale-90 group-hover:scale-100 transition-all duration-300 delay-75">
+                      <span className="font-bold text-foreground text-sm">
+                        View Bravo
+                      </span>
+                      <ArrowUpRight className="w-3.5 h-3.5 text-muted-foreground" />
+                    </div>
+                  </div>
+
+                  <span className="text-foreground font-mono text-xs tracking-widest uppercase bg-background/80 border border-border px-3 py-1 rounded"></span>
+
+                  <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-primary/50 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out group-hover:top-5 group-hover:left-5" />
+                  <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-primary/50 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out group-hover:bottom-5 group-hover:right-5" />
+                </Link>
               </div>
             </div>
           </Card>
@@ -219,12 +247,66 @@ export default function MattOverdrive() {
           </Card>
         </section>
 
+        <section className="relative rounded-xl border border-yellow-500/50 bg-card p-8 md:p-12 overflow-hidden">
+          <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 rounded-full border border-yellow-500/50 bg-yellow-500/10 px-4 py-1.5 text-sm font-medium text-yellow-500">
+                <Trophy className="h-4 w-4" />
+                <span>WINNER: Best Use of Vultr</span>
+              </div>
+
+              <div className="space-y-4">
+                <h2 className="text-3xl md:text-5xl font-bold text-foreground">
+                  SB Hacks 2026
+                </h2>
+                <h3 className="text-xl text-muted-foreground font-mono">
+                  Project: GradeMeIn
+                </h3>
+              </div>
+
+              <p className="text-muted-foreground leading-relaxed text-lg">
+                We built an anti-AI plagiarism detection tool in 24 hours. I
+                engineered the frontend-to-backend infrastructure and utilized
+                Vultr cloud instances.
+              </p>
+            </div>
+
+            <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-border bg-muted shadow-sm group">
+              <Link
+                href="https://devpost.com/software/grademein"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 z-10 block"
+              >
+                <Image
+                  src={GradeMeIn}
+                  alt="GradeMeIn Project"
+                  className="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0 grayscale-[40%]"
+                />
+
+                <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center backdrop-blur-[2px]">
+                  <div className="flex items-center gap-2 border border-primary/50 bg-card px-4 py-2 rounded shadow-[0_0_15px_rgba(0,0,0,0.2)] transform scale-90 group-hover:scale-100 transition-all duration-300 delay-75">
+                    <span className="font-bold text-foreground text-sm">
+                      View Devpost
+                    </span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-muted-foreground" />
+                  </div>
+                </div>
+
+                {/* 3. CORNER BRACKETS (Technical Viewfinder Effect) */}
+                <div className="absolute top-3 left-3 w-6 h-6 border-l-2 border-t-2 border-primary opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out group-hover:top-4 group-hover:left-4" />
+                <div className="absolute bottom-3 right-3 w-6 h-6 border-r-2 border-b-2 border-primary opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out group-hover:bottom-4 group-hover:right-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* FOOTER */}
         <footer className="border-t border-border mt-32 pt-10 pb-20">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div className="space-y-2">
               <div className="font-mono text-sm text-primary font-bold">
-                matt_overdrive<span className="animate-pulse">_</span>
+                Matthew Garcia
               </div>
               <p className="text-sm text-muted-foreground">
                 "Success is not final, failure is not fatal."
