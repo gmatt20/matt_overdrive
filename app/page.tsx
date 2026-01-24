@@ -64,7 +64,7 @@ export default function MattOverdrive() {
                   About Me
                 </CardTitle>
                 <Avatar className="h-10 w-10 border border-border">
-                  <AvatarImage src="/headshotsmol.jpg" />
+                  <AvatarImage src="/headshotsmol.webp" />
                   <AvatarFallback>MG</AvatarFallback>
                 </Avatar>
               </div>

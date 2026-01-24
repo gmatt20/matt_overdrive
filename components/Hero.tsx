@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="flex flex-col md:flex-row gap-6 md:items-center justify-between">
         <div className="flex items-center gap-5">
           <Avatar className="h-20 w-20 border-2 border-border bg-muted">
-            <AvatarImage src="/headshotsmol.jpg" alt="Matthew G" />
+            <AvatarImage src="/headshotsmol.webp" alt="Matthew G" />
             <AvatarFallback>MG</AvatarFallback>
           </Avatar>
           <div className="space-y-1">
