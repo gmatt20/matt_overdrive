@@ -169,9 +169,7 @@ export default function MattOverdrive() {
             </CardContent>
           </Card>
         </section>
-
         <GradeMeIn />
-
         <Projects />
         <Footer />
       </main>

@@ -31,20 +31,7 @@ import {
   SiJavascript,
 } from "react-icons/si";
 import { PlugZap, Database, BrainCircuit, CodeXml } from "lucide-react";
-
-interface TechItem {
-  name: string;
-  icon?: IconType | React.ElementType;
-}
-
-export interface Project {
-  url: StaticImageData;
-  link: string;
-  title: string;
-  description?: string;
-  techStack?: TechItem[]; // Updated to hold name AND icon
-  alt: string;
-}
+import { Project } from "@/types/Project";
 
 export const ProjectData: Project[] = [
   {
