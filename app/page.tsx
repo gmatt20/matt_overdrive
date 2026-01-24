@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 import Hero from "@/components/Hero";
+import Footer from "@/components/Footer";
 import { Bravo } from "@/components/Bravo";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -205,29 +206,7 @@ export default function MattOverdrive() {
         </section>
 
         <Projects />
-        {/* FOOTER */}
-        <footer className="border-t border-border mt-32 pt-10 pb-20">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-            <div className="space-y-2">
-              <div className="font-mono text-sm text-primary font-bold">
-                Matthew Garcia
-              </div>
-              <p className="text-sm text-muted-foreground">
-                "Success is not final, failure is not fatal."
-              </p>
-            </div>
-
-            <div className="flex gap-6 items-center">
-              <Separator
-                orientation="vertical"
-                className="h-8 bg-border hidden md:block"
-              />
-              <Github className="h-5 w-5 text-muted-foreground hover:text-foreground cursor-pointer transition-colors" />
-              <Linkedin className="h-5 w-5 text-muted-foreground hover:text-foreground cursor-pointer transition-colors" />
-              <Mail className="h-5 w-5 text-muted-foreground hover:text-foreground cursor-pointer transition-colors" />
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </main>
     </div>
   );
