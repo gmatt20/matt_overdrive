@@ -26,6 +26,7 @@ import Image from "next/image";
 import Bravo from "@/public/bravo.png";
 import GradeMeIn from "@/public/GradeMeIn.png";
 import Link from "next/link";
+import { Projects } from "@/components/Projects";
 
 export default function MattOverdrive() {
   return (
@@ -301,6 +302,7 @@ export default function MattOverdrive() {
           </div>
         </section>
 
+        <Projects />
         {/* FOOTER */}
         <footer className="border-t border-border mt-32 pt-10 pb-20">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
