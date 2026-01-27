@@ -8,9 +8,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Matthew Garcia | SWE & Founder",
-  description:
-    "Founder of Bravo AI. Software engineer building productive AI powered applications.",
+  title: "Matthew Garcia | SWE",
+  description: "Software engineer building productive AI powered applications.",
 };
 
 export default function RootLayout({

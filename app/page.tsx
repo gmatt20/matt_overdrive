@@ -67,9 +67,7 @@ export default function MattOverdrive() {
                   to build AI tools that actual humans can use with ease.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  As the Founder of{" "}
-                  <span className="text-primary font-medium">Bravo AI</span>, I
-                  am driven by curiosity and the belief that the best way to
+                  I am driven by curiosity and the belief that the best way to
                   predict the future is to build it.
                 </p>
               </div>
@@ -112,7 +110,7 @@ export default function MattOverdrive() {
               <div>
                 <div className="flex justify-between items-start">
                   <h3 className="text-sm font-semibold text-foreground">
-                    Founder & Lead Engineer
+                    Solo Lead Engineer & Architect
                   </h3>
                   <Badge
                     variant="outline"

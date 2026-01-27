@@ -16,10 +16,6 @@ export default function Hero() {
 
           <div className="space-y-1">
             <h2 className="text-xl font-bold text-foreground">Matthew G.</h2>
-            <p className="text-sm font-medium text-foreground">
-              Founder @ <span className="text-primary">Bravo AI</span>
-            </p>
-
             <div className="flex items-center gap-1.5 text-sm text-muted-foreground font-mono">
               <MapPin className="h-3.5 w-3.5" />
               <span>Anaheim, CA</span>
