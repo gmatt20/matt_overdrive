@@ -1,6 +1,3 @@
-import { StaticImageData } from "next/image";
-import { IconType } from "react-icons";
-
 import tkd from "@/public/tkd.webp";
 import acm from "@/public/acm.webp";
 import aisc from "@/public/aisc.webp";
