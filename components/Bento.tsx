@@ -117,7 +117,7 @@ export default function Bento() {
               <span className="text-foreground font-semibold">
                 voice-first agentic agenda
               </span>{" "}
-              solving "Calendar Tetris" forever.
+              solving “Calendar Tetris” forever.
             </p>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function Bento() {
         <CardContent className="flex-1 flex flex-col gap-6">
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Hi! I'm Matthew. I build and ship{" "}
+              Hi! I’m Matthew. I build and ship{" "}
               <span className="text-foreground font-medium">
                 AI-powered products
               </span>{" "}
@@ -150,11 +150,11 @@ export default function Bento() {
               way.
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              I'm currently pursuing my{" "}
+              I’m currently pursuing my{" "}
               <span className="text-foreground font-medium">
                 M.S. in Software Engineering at UC Irvine
               </span>
-              , deepening my foundations while building products of my own. I'm
+              , deepening my foundations while building products of my own. I’m
               especially interested in AI-powered applications, full-stack
               development, and systems where software has to solve a real
               problem for real people.
