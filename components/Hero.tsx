@@ -44,23 +44,19 @@ export default function Hero() {
             </div>
           </div>
         </div>
-
-        <Badge
-          variant="outline"
-          className="font-mono font-normal text-muted-foreground py-1.5 px-3 flex items-center gap-2"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-          </span>
-          STATUS: BUILDING BRAVO AI
-        </Badge>
       </div>
+
+      <Badge
+        variant="outline"
+        className="font-mono font-normal text-muted-foreground py-1.5 px-3 w-fit"
+      >
+        MSWE @ UC IRVINE · OPEN TO SWE SUMMER INTERNSHIP ROLES
+      </Badge>
 
       <div className="space-y-4">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-foreground leading-[1.1]">
-          SOFTWARE ENGINEER <br className="hidden md:block" />
-          <span className="text-brand">& PRODUCT ARCHITECT.</span>
+          Software Engineer shipping <br className="hidden md:block" />
+          <span className="text-brand">AI-powered products.</span>
         </h1>
       </div>
     </section>

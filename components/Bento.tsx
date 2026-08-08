@@ -3,8 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
-import { Briefcase } from "lucide-react";
 import { GraduationCap } from "lucide-react";
+import Link from "next/link";
 
 export default function Bento() {
   return (
@@ -12,9 +12,24 @@ export default function Bento() {
       <Card className="md:col-span-2 min-h-[500px] bg-card border-border relative hover:border-primary/50 transition-colors overflow-hidden flex flex-col md:flex-row">
         <div className="flex-1 p-8 md:p-12 flex flex-col justify-center relative z-10">
           <div className="space-y-4">
-            <h2 className="font-display text-5xl md:text-7xl text-card-foreground tracking-wide">
-              BRAVO AI
-            </h2>
+            <div className="flex items-center gap-3 flex-wrap">
+              <h2 className="font-display text-5xl md:text-7xl text-card-foreground tracking-wide">
+                BRAVO AI
+              </h2>
+              <Link
+                href="https://agentbravo.xyz/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Badge
+                  variant="outline"
+                  className="font-mono font-normal text-primary border-primary/40 py-1 px-2.5 flex items-center gap-1.5 hover:border-primary transition-colors"
+                >
+                  <span className="inline-flex rounded-full h-2 w-2 bg-green-500" />
+                  LIVE · agentbravo.xyz
+                </Badge>
+              </Link>
+            </div>
 
             <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-lg">
               The{" "}
@@ -41,21 +56,41 @@ export default function Bento() {
         <CardContent className="flex-1 flex flex-col gap-6">
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Hello! I'm Matthew—a{" "}
+              Hi! I'm Matthew. I build and ship{" "}
               <span className="text-foreground font-medium">
-                software engineer
+                AI-powered products
               </span>{" "}
-              obsessed with building AI-powered productivity tools.
+              that are actually useful and valuable. Most recently, I built and
+              shipped{" "}
+              <span className="text-foreground font-medium">Bravo AI</span>, a
+              voice-first calendar agent that lets you manage your schedule
+              through natural conversation — I took it from an idea to a live
+              product, owning the product, engineering, and deployment along the
+              way.
             </p>
-            <Separator className="bg-border" />
             <p className="text-sm text-muted-foreground leading-relaxed">
-              I leverage my background in{" "}
-              <span className="text-foreground font-medium">Psychology</span> to
-              build AI tools that actual humans can use with ease.
+              I'm currently pursuing my{" "}
+              <span className="text-foreground font-medium">
+                M.S. in Software Engineering at UC Irvine
+              </span>
+              , deepening my foundations while building products of my own. I'm
+              especially interested in AI-powered applications, full-stack
+              development, and systems where software has to solve a real problem
+              for real people.
             </p>
-            <p className="text-sm text-muted-foreground">
-              I am driven by curiosity and the belief that the best way to
-              predict the future is to build it.
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              I enjoy taking ambiguous ideas, turning them into working software,
+              and iterating until they become something people actually want to
+              use.
+            </p>
+            <p className="rounded-lg border border-primary/20 bg-primary/5 px-3 py-2.5 text-sm leading-relaxed text-muted-foreground">
+              Currently seeking{" "}
+              <span className="text-primary font-medium">
+                Summer 2027 Software Engineering internships
+              </span>{" "}
+              where I can work alongside a strong team, take meaningful ownership
+              of projects, and contribute across the stack from idea to
+              production.
             </p>
           </div>
 
@@ -66,6 +101,17 @@ export default function Bento() {
               <GraduationCap className="h-4 w-4 text-primary" />
               Education
             </h4>
+            <div className="flex justify-between items-start">
+              <div className="space-y-0.5">
+                <p className="text-xs font-medium text-foreground">UC Irvine</p>
+                <p className="text-[10px] text-muted-foreground">
+                  M.S. Software Engineering
+                </p>
+              </div>
+              <Badge variant="secondary" className="text-[10px] h-5 font-mono">
+                2026
+              </Badge>
+            </div>
             <div className="flex justify-between items-start">
               <div className="space-y-0.5">
                 <p className="text-xs font-medium text-foreground">
@@ -85,7 +131,6 @@ export default function Bento() {
       <Card className="hover:border-primary/50 transition-colors bg-card border-border relative overflow-hidden flex flex-col h-full">
         <CardHeader className="pb-2 shrink-0">
           <CardTitle className="text-foreground flex items-center gap-2 text-lg">
-            <Briefcase className="h-4 w-4 text-primary" />
             <span>Experience</span>
           </CardTitle>
         </CardHeader>
@@ -94,20 +139,43 @@ export default function Bento() {
           <div>
             <div className="flex justify-between items-start">
               <h3 className="text-sm font-semibold text-foreground">
-                Solo Lead Engineer & Architect
+                Solo Software Engineer
               </h3>
               <Badge
                 variant="outline"
                 className="text-[10px] px-2 h-5 border-primary/30 text-primary font-mono"
               >
-                2026 - Present
+                Jan 2026 - Present
               </Badge>
             </div>
             <div className="text-xs font-bold text-brand mt-0.5">Bravo AI</div>
             <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-              Architecting a voice-first calendar agent using Deepgram’s Flux
-              for low-latency speech and Google Calendar API for bi-directional
-              sync.
+              Designed, built, and launched a live voice-first calendar
+              assistant end-to-end as sole engineer — real-time Deepgram voice
+              pipeline with LLM command parsing, two-way Google Calendar sync,
+              and Stripe subscription billing.
+            </p>
+          </div>
+          <div>
+            <div className="flex justify-between items-start">
+              <h3 className="text-sm font-semibold text-foreground">
+                Lead Development Intern
+              </h3>
+              <Badge
+                variant="outline"
+                className="text-[10px] px-2 h-5 border-primary/30 text-primary font-mono"
+              >
+                Feb 2026 - Present
+              </Badge>
+            </div>
+            <div className="text-xs font-bold text-brand mt-0.5">
+              UniConnect
+            </div>
+            <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+              Architected and shipped a two-sided platform for a live iOS app —
+              an admin dashboard and a vendor portal (onboarded 9 Santa Barbara
+              businesses) on Supabase, plus the Next.js marketing site
+              (uniconnect.social).
             </p>
           </div>
           <div>

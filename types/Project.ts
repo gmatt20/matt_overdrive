@@ -12,4 +12,5 @@ export interface Project {
   description?: string;
   techStack?: TechItem[];
   alt: string;
+  fit?: "cover" | "contain";
 }

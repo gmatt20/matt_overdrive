@@ -6,6 +6,7 @@ import GradeMeIn from "@/public/GradeMeIn.webp";
 import BitWizards from "@/public/BitWizards.webp";
 import Cinemagine from "@/public/Cinemagine.webp";
 import neovim from "@/public/neovim.webp";
+import cast from "@/public/cast.webp";
 import charity_water from "@/public/charity_water.webp";
 import ponder from "@/public/ponder.webp";
 
@@ -26,6 +27,12 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
+  SiClaude,
+  SiStripe,
+  SiPython,
+  SiPypi,
+  SiGithubactions,
+  SiPytest,
 } from "react-icons/si";
 import { PlugZap, Database, BrainCircuit, CodeXml } from "lucide-react";
 import { Project } from "@/types/Project";
@@ -36,16 +43,17 @@ export const ProjectData: Project[] = [
     link: "https://agentbravo.xyz/",
     title: "Agent Bravo AI",
     description:
-      "A voice-first AI calendar agent that negotiates schedules in real-time. Built with Deepgram for voice streaming and syncs directly with Google Calendar.",
+      "A live, voice-first AI calendar assistant built solo end-to-end. Real-time Deepgram voice pipeline with LLM command parsing, two-way Google Calendar sync, and Stripe subscription billing.",
     techStack: [
       { name: "Deepgram", icon: SiDeepgram },
       { name: "Next.js", icon: SiNextdotjs },
-      { name: "Clerk", icon: SiClerk },
-      { name: "WebSockets", icon: PlugZap },
+      { name: "Claude", icon: SiClaude },
+      { name: "Stripe", icon: SiStripe },
       { name: "Neon", icon: Database },
       { name: "Drizzle", icon: SiDrizzle },
     ],
     alt: "Picture of Agent Bravo AI",
+    fit: "contain",
   },
   {
     url: GradeMeIn,
@@ -63,6 +71,21 @@ export const ProjectData: Project[] = [
     alt: "Picture of GradeMeIn",
   },
   {
+    url: cast,
+    link: "https://github.com/gmatt20/cast",
+    title: "Cast",
+    description:
+      "An open-source CLI that scaffolds new project structures from a single command. Published to PyPI with automated GitHub Actions releases and a pytest suite.",
+    techStack: [
+      { name: "Python", icon: SiPython },
+      { name: "PyPI", icon: SiPypi },
+      { name: "GitHub Actions", icon: SiGithubactions },
+      { name: "pytest", icon: SiPytest },
+    ],
+    alt: "Picture of Cast CLI",
+    fit: "contain",
+  },
+  {
     url: acm,
     link: "https://acm.cs.ucr.edu/",
     title: "ACM @ UCR",
@@ -76,48 +99,6 @@ export const ProjectData: Project[] = [
       { name: "Figma", icon: SiFigma },
     ],
     alt: "Picture of the ACM @ UCR Website",
-  },
-  {
-    url: aisc,
-    link: "https://aisc.ucrhighlanders.org/",
-    title: "AI Student Collective",
-    description:
-      "A central resource hub for AI students at UCR. Built it with an awesome frontend team.",
-    techStack: [
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "Tailwind", icon: SiTailwindcss },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "Figma", icon: SiFigma },
-    ],
-    alt: "Picture of the AI Student Collective @ UCR Website",
-  },
-  {
-    url: tkd,
-    link: "https://tkd.ucrhighlanders.org/",
-    title: "TKD @ UCR",
-    description:
-      "The official website for UCR Taekwondo team. Focused on fast load times and mobile responsiveness.",
-    techStack: [
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "Tailwind", icon: SiTailwindcss },
-      { name: "TypeScript", icon: SiTypescript },
-      { name: "Figma", icon: SiFigma },
-    ],
-    alt: "Picture of The Taekwondo @ UCR Website",
-  },
-  {
-    url: ponder,
-    link: "https://ponder-9thg-8xxgoc2uw-gmattdevs-4416s-projects.vercel.app/",
-    title: "Ponder",
-    description:
-      "A privacy-first notes app that runs offline. I built a dual database architecture with SQLite for the desktop app and IndexedDB for the browser.",
-    techStack: [
-      { name: "Tauri", icon: SiTauri },
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "SQLite", icon: SiSqlite },
-      { name: "Zustand", icon: BrainCircuit },
-    ],
-    alt: "Picture Ponder: Privacy First Notes App",
   },
   {
     url: Cinemagine,
@@ -160,6 +141,48 @@ export const ProjectData: Project[] = [
       { name: "Mason", icon: PlugZap },
     ],
     alt: "Picture of overdrive.nvim",
+  },
+  {
+    url: aisc,
+    link: "https://aisc.ucrhighlanders.org/",
+    title: "AI Student Collective",
+    description:
+      "A central resource hub for AI students at UCR. Built it with an awesome frontend team.",
+    techStack: [
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Tailwind", icon: SiTailwindcss },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "Figma", icon: SiFigma },
+    ],
+    alt: "Picture of the AI Student Collective @ UCR Website",
+  },
+  {
+    url: tkd,
+    link: "https://tkd.ucrhighlanders.org/",
+    title: "TKD @ UCR",
+    description:
+      "The official website for UCR Taekwondo team. Focused on fast load times and mobile responsiveness.",
+    techStack: [
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Tailwind", icon: SiTailwindcss },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "Figma", icon: SiFigma },
+    ],
+    alt: "Picture of The Taekwondo @ UCR Website",
+  },
+  {
+    url: ponder,
+    link: "https://ponder-9thg-8xxgoc2uw-gmattdevs-4416s-projects.vercel.app/",
+    title: "Ponder",
+    description:
+      "A privacy-first notes app that runs offline. I built a dual database architecture with SQLite for the desktop app and IndexedDB for the browser.",
+    techStack: [
+      { name: "Tauri", icon: SiTauri },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "SQLite", icon: SiSqlite },
+      { name: "Zustand", icon: BrainCircuit },
+    ],
+    alt: "Picture Ponder: Privacy First Notes App",
   },
   {
     url: charity_water,

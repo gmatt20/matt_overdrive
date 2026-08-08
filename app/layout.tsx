@@ -9,7 +9,8 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "Matthew Garcia | SWE",
-  description: "Software engineer building productive AI powered applications.",
+  description:
+    "Software engineer building AI-powered products people actually use.",
 };
 
 export default function RootLayout({

@@ -25,11 +25,23 @@ export function ProjectsCard({ projects, className }: ProjectsCardProps) {
             rel="noopener noreferrer"
             className="absolute inset-0 z-10 block"
           >
+            {project.fit === "contain" && (
+              <Image
+                src={project.url}
+                alt=""
+                aria-hidden
+                fill
+                className="object-cover scale-110 blur-2xl opacity-50 transition-opacity duration-700 group-hover:opacity-20"
+              />
+            )}
             <Image
               src={project.url}
               alt={project.alt}
               fill
-              className="object-cover transition-all duration-700 ease-out group-hover:scale-105 opacity-80 group-hover:opacity-40 group-hover:blur-[2px]"
+              className={cn(
+                "relative transition-all duration-700 ease-out group-hover:scale-105 opacity-80 group-hover:opacity-40 group-hover:blur-[2px]",
+                project.fit === "contain" ? "object-contain" : "object-cover"
+              )}
             />
 
             <div className="absolute inset-0 bg-background/0 group-hover:bg-background/80 transition-colors duration-300 flex flex-col items-center justify-center px-4 text-center backdrop-blur-[0px] group-hover:backdrop-blur-[2px]">
