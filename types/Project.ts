@@ -13,4 +13,5 @@ export interface Project {
   techStack?: TechItem[];
   alt: string;
   fit?: "cover" | "contain";
+  category?: "flagship" | "hackathon-win" | "hackathon" | "personal" | "community";
 }

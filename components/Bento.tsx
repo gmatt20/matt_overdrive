@@ -3,8 +3,89 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, Trophy, ArrowUpRight, MapPin } from "lucide-react";
 import Link from "next/link";
+
+interface EducationEntry {
+  school: string;
+  degree: string;
+  location: string;
+  period: string;
+  status?: string;
+}
+
+const education: EducationEntry[] = [
+  {
+    school: "UC Irvine",
+    degree: "M.S. Software Engineering",
+    location: "Irvine, CA",
+    period: "Sept 2026 - Dec 2027",
+  },
+  {
+    school: "UC Riverside",
+    degree: "B.A. Psychology",
+    location: "Riverside, CA",
+    period: "Conferred June 2026",
+  },
+];
+
+interface ExperienceLink {
+  label: string;
+  href: string;
+}
+
+interface ExperienceEntry {
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+  award?: string;
+  awardHref?: string;
+  links?: ExperienceLink[];
+}
+
+const experience: ExperienceEntry[] = [
+  {
+    role: "Solo Software Engineer",
+    company: "Bravo AI",
+    period: "Jan 2026 - Present",
+    description:
+      "Designed, built, and launched a live voice-first calendar assistant end-to-end as sole engineer — real-time Deepgram voice pipeline with LLM command parsing, two-way Google Calendar sync, and Stripe subscription billing.",
+    links: [{ label: "Live site", href: "https://agentbravo.xyz/" }],
+  },
+  {
+    role: "Lead Development Intern",
+    company: "UniConnect",
+    period: "Feb 2026 - Present",
+    description:
+      "Architected and shipped a two-sided platform for a live iOS app — an admin dashboard and a vendor portal (onboarded 9 Santa Barbara businesses) on Supabase, plus the Next.js marketing site (uniconnect.social).",
+    links: [
+      { label: "Live site", href: "https://uniconnect.social" },
+      {
+        label: "App Store",
+        href: "https://apps.apple.com/us/app/uniconnect-find-your-people/id6760719946",
+      },
+    ],
+  },
+  {
+    role: "Associate Team Lead",
+    company: "Podium Education",
+    period: "2025 - Present",
+    description:
+      "Supporting a 200+ student cohort. Mentoring trainees in web development (HTML/CSS/JS) and troubleshooting Git workflows.",
+    award: "Breakout Star",
+    awardHref:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7491924666975100928/",
+  },
+  {
+    role: "Frontend Software Engineer",
+    company: "ACM @ UCR",
+    period: "2024 - 2025",
+    description:
+      "Shipped 3 production websites for 1,000+ users. Engineered responsive UIs using Next.js, TypeScript, and Tailwind CSS.",
+    links: [{ label: "Live site", href: "https://acm.cs.ucr.edu/" }],
+  },
+];
 
 export default function Bento() {
   return (
@@ -75,55 +156,65 @@ export default function Bento() {
               </span>
               , deepening my foundations while building products of my own. I'm
               especially interested in AI-powered applications, full-stack
-              development, and systems where software has to solve a real problem
-              for real people.
+              development, and systems where software has to solve a real
+              problem for real people.
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              I enjoy taking ambiguous ideas, turning them into working software,
-              and iterating until they become something people actually want to
-              use.
+              I enjoy taking ambiguous ideas, turning them into working
+              software, and iterating until they become something people
+              actually want to use.
             </p>
             <p className="rounded-lg border border-primary/20 bg-primary/5 px-3 py-2.5 text-sm leading-relaxed text-muted-foreground">
               Currently seeking{" "}
               <span className="text-primary font-medium">
                 Summer 2027 Software Engineering internships
               </span>{" "}
-              where I can work alongside a strong team, take meaningful ownership
-              of projects, and contribute across the stack from idea to
-              production.
+              where I can work alongside a strong team, take meaningful
+              ownership of projects, and contribute across the stack from idea
+              to production.
             </p>
           </div>
 
           <Separator className="bg-border" />
 
-          <div className="space-y-2">
-            <h4 className="text-sm font-semibold text-foreground flex items-center gap-2">
-              <GraduationCap className="h-4 w-4 text-primary" />
+          <div className="space-y-3">
+            <h4 className="text-base font-semibold text-foreground flex items-center gap-2">
+              <GraduationCap className="h-5 w-5 text-primary" />
               Education
             </h4>
-            <div className="flex justify-between items-start">
-              <div className="space-y-0.5">
-                <p className="text-xs font-medium text-foreground">UC Irvine</p>
-                <p className="text-[10px] text-muted-foreground">
-                  M.S. Software Engineering
-                </p>
-              </div>
-              <Badge variant="secondary" className="text-[10px] h-5 font-mono">
-                2026
-              </Badge>
-            </div>
-            <div className="flex justify-between items-start">
-              <div className="space-y-0.5">
-                <p className="text-xs font-medium text-foreground">
-                  UC Riverside
-                </p>
-                <p className="text-[10px] text-muted-foreground">
-                  B.A. Psychology
-                </p>
-              </div>
-              <Badge variant="secondary" className="text-[10px] h-5 font-mono">
-                June 2026
-              </Badge>
+            <div className="space-y-3">
+              {education.map((edu) => (
+                <div
+                  key={edu.school}
+                  className="flex items-start gap-3 rounded-lg border border-border bg-background/40 p-3 transition-colors hover:border-primary/40"
+                >
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                    <GraduationCap className="h-5 w-5" />
+                  </div>
+                  <div className="flex-1 min-w-0 space-y-1">
+                    <div className="flex items-start justify-between gap-2">
+                      <p className="text-sm font-semibold text-foreground">
+                        {edu.school}
+                      </p>
+                      <Badge
+                        variant="secondary"
+                        className="text-[10px] h-5 font-mono shrink-0"
+                      >
+                        {edu.period}
+                      </Badge>
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      {edu.degree}
+                    </p>
+                    <div className="flex items-center gap-2 pt-0.5">
+                      <span className="inline-flex items-center gap-1 text-[10px] text-muted-foreground/70">
+                        <MapPin className="h-3 w-3" />
+                        {edu.location}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </CardContent>
@@ -136,86 +227,61 @@ export default function Bento() {
         </CardHeader>
 
         <CardContent className="space-y-6 relative z-10 overflow-y-auto pr-2 custom-scrollbar">
-          <div>
-            <div className="flex justify-between items-start">
-              <h3 className="text-sm font-semibold text-foreground">
-                Solo Software Engineer
-              </h3>
-              <Badge
-                variant="outline"
-                className="text-[10px] px-2 h-5 border-primary/30 text-primary font-mono"
-              >
-                Jan 2026 - Present
-              </Badge>
+          {experience.map((exp) => (
+            <div key={`${exp.company}-${exp.role}`}>
+              <div className="flex justify-between items-start">
+                <h3 className="text-sm font-semibold text-foreground">
+                  {exp.role}
+                </h3>
+                <Badge
+                  variant="outline"
+                  className="text-[10px] px-2 h-5 border-primary/30 text-primary font-mono shrink-0"
+                >
+                  {exp.period}
+                </Badge>
+              </div>
+              <div className="text-xs font-bold text-brand mt-0.5">
+                {exp.company}
+              </div>
+              <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                {exp.description}
+              </p>
+              {(exp.award || (exp.links && exp.links.length > 0)) && (
+                <div className="mt-2 flex flex-wrap items-center gap-1.5">
+                  {exp.award &&
+                    (exp.awardHref ? (
+                      <Link
+                        href={exp.awardHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 rounded-full border border-yellow-500/40 bg-yellow-500/10 px-2 py-0.5 text-[10px] font-medium text-yellow-500 transition-colors hover:border-yellow-500/80 hover:bg-yellow-500/20"
+                      >
+                        <Trophy className="h-3 w-3" />
+                        {exp.award}
+                        <ArrowUpRight className="h-3 w-3" />
+                      </Link>
+                    ) : (
+                      <span className="inline-flex items-center gap-1 rounded-full border border-yellow-500/40 bg-yellow-500/10 px-2 py-0.5 text-[10px] font-medium text-yellow-500">
+                        <Trophy className="h-3 w-3" />
+                        {exp.award}
+                      </span>
+                    ))}
+                  {exp.links?.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 rounded-full border border-border bg-background/50 px-2 py-0.5 text-[10px] font-mono text-muted-foreground transition-colors hover:text-foreground hover:border-primary/40"
+                    >
+                      {link.label}
+                      <ArrowUpRight className="h-3 w-3" />
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
-            <div className="text-xs font-bold text-brand mt-0.5">Bravo AI</div>
-            <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-              Designed, built, and launched a live voice-first calendar
-              assistant end-to-end as sole engineer — real-time Deepgram voice
-              pipeline with LLM command parsing, two-way Google Calendar sync,
-              and Stripe subscription billing.
-            </p>
-          </div>
-          <div>
-            <div className="flex justify-between items-start">
-              <h3 className="text-sm font-semibold text-foreground">
-                Lead Development Intern
-              </h3>
-              <Badge
-                variant="outline"
-                className="text-[10px] px-2 h-5 border-primary/30 text-primary font-mono"
-              >
-                Feb 2026 - Present
-              </Badge>
-            </div>
-            <div className="text-xs font-bold text-brand mt-0.5">
-              UniConnect
-            </div>
-            <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-              Architected and shipped a two-sided platform for a live iOS app —
-              an admin dashboard and a vendor portal (onboarded 9 Santa Barbara
-              businesses) on Supabase, plus the Next.js marketing site
-              (uniconnect.social).
-            </p>
-          </div>
-          <div>
-            <div className="flex justify-between items-start">
-              <h3 className="text-sm font-semibold text-foreground">
-                Associate Team Lead
-              </h3>
-              <Badge
-                variant="outline"
-                className="text-[10px] px-2 h-5 border-primary/30 text-primary font-mono"
-              >
-                2025 - Present
-              </Badge>
-            </div>
-            <div className="text-xs text-brand font-bold mt-0.5">
-              Podium Education
-            </div>
-            <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-              Supporting a 200+ student cohort. Mentoring trainees in web
-              development (HTML/CSS/JS) and troubleshooting Git workflows.
-            </p>
-          </div>
-          <div>
-            <div className="flex justify-between items-start">
-              <h3 className="text-sm font-semibold text-foreground">
-                Frontend Software Engineer
-              </h3>
-              <Badge
-                variant="outline"
-                className="text-[10px] px-2 h-5 border-primary/30 text-primary font-mono"
-              >
-                2024 - 2025
-              </Badge>
-            </div>
-            <div className="text-xs font-bold text-brand mt-0.5">ACM @ UCR</div>
-            <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-              Shipped 3 production websites for 1,000+ users. Engineered
-              responsive UIs using Next.js, TypeScript, and Tailwind CSS.
-            </p>
-          </div>
+          ))}
         </CardContent>
       </Card>
     </section>
