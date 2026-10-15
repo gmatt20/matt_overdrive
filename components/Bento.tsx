@@ -38,6 +38,7 @@ interface ExperienceEntry {
   role: string;
   company: string;
   period: string;
+  location?: string;
   description: string;
   award?: string;
   awardHref?: string;
@@ -46,19 +47,20 @@ interface ExperienceEntry {
 
 const experience: ExperienceEntry[] = [
   {
-    role: "Solo Software Engineer",
-    company: "Bravo AI",
-    period: "Jan 2026 - Present",
+    role: "STEAM Instructor",
+    company: "Dreams for Schools",
+    period: "Aug 2026 - Present",
+    location: "Santa Ana, CA",
     description:
-      "Designed, built, and launched a live voice-first calendar assistant end-to-end as sole engineer — real-time Deepgram voice pipeline with LLM command parsing, two-way Google Calendar sync, and Stripe subscription billing.",
-    links: [{ label: "Live site", href: "https://agentbravo.xyz/" }],
+      "Teaching Arduino programming, block-based coding, and introductory engineering to classrooms of 20+ elementary students across Orange County, delivering project-based STEAM curriculum alongside a team of 2+ instructors.",
   },
   {
     role: "Lead Development Intern",
     company: "UniConnect",
-    period: "Feb 2026 - Present",
+    period: "Feb 2026 - May 2026",
+    location: "Remote",
     description:
-      "Architected and shipped a two-sided platform for a live iOS app — an admin dashboard and a vendor portal (onboarded 9 Santa Barbara businesses) on Supabase, plus the Next.js marketing site (uniconnect.social).",
+      "Shipped a Next.js content management platform for a live iOS app — an admin dashboard tracking 10+ metrics with content moderation for 5+ admins, plus a vendor portal that let 9 Santa Barbara businesses publish deals directly to UCSB students, secured with Supabase row-level security.",
     links: [
       { label: "Live site", href: "https://uniconnect.social" },
       {
@@ -68,11 +70,12 @@ const experience: ExperienceEntry[] = [
     ],
   },
   {
-    role: "Associate Team Lead",
+    role: "Team Lead",
     company: "Podium Education",
-    period: "2025 - Present",
+    period: "Aug 2025 - Apr 2026",
+    location: "Remote",
     description:
-      "Supporting a 200+ student cohort. Mentoring trainees in web development (HTML/CSS/JS) and troubleshooting Git workflows.",
+      "Supported cohorts of 200+ students across U.S. universities. Taught agentic software development with Claude Code and Lovable, mentored students through HTML/CSS/JavaScript and Git/GitHub debugging, and graded projects with actionable technical feedback.",
     award: "Breakout Star",
     awardHref:
       "https://www.linkedin.com/feed/update/urn:li:activity:7491924666975100928/",
@@ -80,9 +83,10 @@ const experience: ExperienceEntry[] = [
   {
     role: "Frontend Software Engineer",
     company: "ACM @ UCR",
-    period: "2024 - 2025",
+    period: "Jan 2025 - Dec 2025",
+    location: "Riverside, CA",
     description:
-      "Shipped 3 production websites for 1,000+ users. Engineered responsive UIs using Next.js, TypeScript, and Tailwind CSS.",
+      "Delivered 3 deployed Next.js applications (Taekwondo @ UCR, ACM Atlas, AI Student Collective) used by 1,000+ students and faculty. Translated Figma designs into reusable responsive components for a team of 5+ engineers and cut contentful paint by migrating images to WebP.",
     links: [{ label: "Live site", href: "https://acm.cs.ucr.edu/" }],
   },
 ];
@@ -137,41 +141,48 @@ export default function Bento() {
         <CardContent className="flex-1 flex flex-col gap-6">
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Hi! I’m Matthew. I build and ship{" "}
+              I engineer and ship{" "}
               <span className="text-foreground font-medium">
                 AI-powered products
               </span>{" "}
-              that are actually useful and valuable. Most recently, I built and
-              shipped{" "}
+              that simplify workflows and empower people.
+            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              I built and shipped{" "}
               <span className="text-foreground font-medium">Bravo AI</span>, a
-              voice-first calendar agent that lets you manage your schedule
-              through natural conversation — I took it from an idea to a live
-              product, owning the product, engineering, and deployment along the
-              way.
+              voice-first calendar assistant that turns natural conversation
+              into real scheduling actions. After gathering user feedback, I’m
+              reimagining Bravo AI as a{" "}
+              <span className="text-foreground font-medium">
+                Chrome extension
+              </span>{" "}
+              to better integrate with how people work.
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
               I’m currently pursuing my{" "}
               <span className="text-foreground font-medium">
-                M.S. in Software Engineering at UC Irvine
+                Master’s in Software Engineering at UC Irvine
               </span>
-              , deepening my foundations while building products of my own. I’m
-              especially interested in AI-powered applications, full-stack
-              development, and systems where software has to solve a real
-              problem for real people.
+              , strengthening my fundamentals and collaborating with talented
+              peers to build awesome software.
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              I enjoy taking ambiguous ideas, turning them into working
-              software, and iterating until they become something people
-              actually want to use.
+              My approach to software engineering is informed by my{" "}
+              <span className="text-foreground font-medium">
+                background in psychology
+              </span>
+              . I believe great software starts with understanding people, and I
+              strive to put users at the center of every engineering decision.
             </p>
             <p className="rounded-lg border border-primary/20 bg-primary/5 px-3 py-2.5 text-sm leading-relaxed text-muted-foreground">
-              Currently seeking{" "}
+              I’m currently seeking{" "}
               <span className="text-primary font-medium">
-                Summer 2027 Software Engineering internships
+                Summer 2027 Software Engineering internship
               </span>{" "}
-              where I can work alongside a strong team, take meaningful
-              ownership of projects, and contribute across the stack from idea
-              to production.
+              opportunities.
+            </p>
+            <p className="text-sm text-muted-foreground/70 font-mono">
+              Rock on 🤟
             </p>
           </div>
 
@@ -242,6 +253,12 @@ export default function Bento() {
               </div>
               <div className="text-xs font-bold text-brand mt-0.5">
                 {exp.company}
+                {exp.location && (
+                  <span className="font-normal text-muted-foreground/70">
+                    {" · "}
+                    {exp.location}
+                  </span>
+                )}
               </div>
               <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
                 {exp.description}
@@ -282,6 +299,16 @@ export default function Bento() {
               )}
             </div>
           ))}
+
+          <Link
+            href="https://www.linkedin.com/in/mattg2765/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-[11px] font-mono text-muted-foreground/80 transition-colors hover:text-foreground"
+          >
+            Full work history on LinkedIn
+            <ArrowUpRight className="h-3 w-3" />
+          </Link>
         </CardContent>
       </Card>
     </section>

@@ -1,7 +1,6 @@
 import { MapPin } from "lucide-react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export default function Hero() {
@@ -46,18 +45,27 @@ export default function Hero() {
         </div>
       </div>
 
-      <Badge
-        variant="outline"
-        className="font-mono font-normal text-muted-foreground py-1.5 px-3 w-fit"
-      >
-        MSWE @ UC IRVINE · OPEN TO SWE SUMMER INTERNSHIP ROLES
-      </Badge>
-
       <div className="space-y-4">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-foreground leading-[1.1]">
-          Software Engineer shipping <br className="hidden md:block" />
-          <span className="text-brand">AI-powered products.</span>
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[1.05]">
+          <span className="block text-foreground">Software Engineer</span>
+          <span className="block text-brand">Building AI-powered products</span>
         </h1>
+
+        <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-base md:text-xl font-semibold text-muted-foreground">
+          <span>Full-stack engineering</span>
+          <span aria-hidden="true" className="text-brand/50">
+            /
+          </span>
+          <span>Voice AI</span>
+          <span aria-hidden="true" className="text-brand/50">
+            /
+          </span>
+          <span>Agentic systems</span>
+        </p>
+
+        <p className="md:text-xl font-semibold text-brand pt-1">
+          MSWE @ UC Irvine
+        </p>
       </div>
     </section>
   );
